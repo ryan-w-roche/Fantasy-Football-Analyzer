@@ -29,6 +29,7 @@ namespace Fantasy_Football_Analyzer.Services
             {
                 response.EnsureSuccessStatusCode();
                 var json = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(json);
                 var data = JsonConvert.DeserializeObject<PlayerGameDataModel>(json);
                 Console.WriteLine(data);
 
