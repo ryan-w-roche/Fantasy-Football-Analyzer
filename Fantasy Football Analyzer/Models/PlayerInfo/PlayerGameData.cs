@@ -1,6 +1,6 @@
-﻿namespace Fantasy_Football_Analyzer.Models
+﻿namespace Fantasy_Football_Analyzer.Models.PlayerInfo
 {
-    public class PlayerGameDataModel
+    public class PlayerGameData
     {
         public Dictionary<string, PlayerGameDetailsModel> Body { get; set; }
     }

@@ -1,4 +1,4 @@
-﻿namespace Fantasy_Football_Analyzer.Models
+﻿namespace Fantasy_Football_Analyzer.Models.PlayerInfo
 {
     public class FantasyPointsModel
     {

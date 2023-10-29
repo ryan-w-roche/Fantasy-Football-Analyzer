@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Fantasy_Football_Analyzer.Models.PlayerInfo.PlayerModel>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LongName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pos)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Player Details", "Player", "Player", new { id = item.PlayerID }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
