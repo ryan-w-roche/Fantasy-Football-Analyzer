@@ -1,0 +1,28 @@
+﻿@model Fantasy_Football_Analyzer.Models.PlayerGameDataModel
+
+<h1>@Model.Body.ElementAt(0).Value.LongName</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Game ID</th>
+            <th>Team</th>
+            <th>Receptions</th>
+            <th>Rec TD</th>
+            <th>Rec Yds</th>
+            <th>Fantasy Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model.Body)
+        {
+            <tr>
+                <td>@game.Key</td>
+                <td>@game.Value.Team</td>
+                <td>@game.Value.Receiving.Receptions</td>
+                <td>@game.Value.Receiving.RecTD</td>
+                <td>@game.Value.Receiving.RecYds</td>
+                <td>@game.Value.FantasyPoints</td>
+            </tr>
+        }
+    </tbody>
+</table>
